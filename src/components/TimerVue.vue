@@ -6,7 +6,6 @@
             <span>{{ this.time.hour }} hours</span><br>
             <span>{{ this.time.minute }} minutes</span><br>
             <span>{{ this.time.second }} seconds</span>
-
         </div>
     </div>
 </template>
@@ -52,7 +51,7 @@ export default {
         letter-spacing: 5px;
     }
     #timer #actual-time{
-        font-size: 4rem;
+        font-size: 200%;
         font-weight: 200;
     }
 </style>

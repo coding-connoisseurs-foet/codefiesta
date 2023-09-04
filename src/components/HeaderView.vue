@@ -1,35 +1,82 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Expand at md</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample04">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
-    </div>
-  </nav>
+	<nav class="mt-5">
+		<ul class="mynav-ul flex-column flex-md-row">
+			<li v-if="this.$route.name!='home'">
+				<router-link to="/"> &LeftAngleBracket; Back to Home</router-link>
+			</li>
+			<li v-for="(n,i) in navItems" v-show="this.$route.name=='home'" :key="i">
+				<router-link :to="n.link">{{n.name}}</router-link>
+			</li>
+			<li v-if="this.$route.name!='home'">
+				<router-link to="/register">Register Now</router-link>
+			</li>
+		</ul>
+	</nav>
 </template>
+
+<script>
+export default {
+	name: "HeaderView",
+	data(){
+		return{
+			navItems: [
+				{
+					name: "Events",
+					link: "/events"
+				},
+				{
+					name: "Schedule",
+					link: "/schedule"
+				},
+				{
+					name: "Sponsors",
+					link: "/sponsors"
+				},
+				{
+					name: "Team",
+					link: "/team"
+				}
+			]
+		}
+	}
+};
+
+</script>
+
+<style scoped>
+.mynav-ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.mynav-ul li a{
+	padding: 0 1em;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.mynav-ul li:hover{
+	color: #fff;
+	text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+}
+
+.mynav-ul li{
+	padding: 4px 0px;
+	margin: 10px;
+	background: rgba(255, 255, 255, 0.075);
+	box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+	backdrop-filter: blur( 3.5px );
+	border-radius: 15px;
+	-webkit-backdrop-filter: blur( 3.5px );
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+nav{
+	transition: 0.5s;
+}
+
+</style>

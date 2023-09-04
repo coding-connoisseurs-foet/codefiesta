@@ -1,20 +1,24 @@
 <template>
     <div class="container-fluid w-100">
-        <div class="row justify-content-center">
-            <div class="cf-head-wrapper p-5 col-12 d-flex flex-column justify-content-center">
+        <div class="row cf-head-wrapper p-5 justify-content-between align-items-center">
+            <div class="col-md-auto col-12">
                 <div class="text-md-start text-center">
-                    <h1 id="cf-head" class="pb-2 text-white">
+                    <HeaderView/>
+                    <h1 id="cf-head" class="my-3 text-white">
                         Code Fiesta
                     </h1>
                     <h4 class="text-white" id="cf-tagline">The flagship coding festival of FoET, Lucknow University</h4>
                     <div id="main-announce">
-                        <a href="#" class="btn btn-lg my-3 btn-outline-light rounded-0" id="cf-register">
+                        <a href="#" class="btn btn-lg my-5 btn-outline-light rounded-0" id="cf-register">
                             <span class="glowing-text">
                                 REGISTER NOW
                             </span>
                         </a>
                     </div>
+                   
                 </div>
+            </div>
+            <div class="col-md-auto col-12 text-md-start text-center">
                 <TimerVue event_date="2023-09-22 12:00"/>
             </div>
         </div>
@@ -77,7 +81,7 @@
         animation: border-flicker 2s linear infinite;
     }
 
-    /* #cf-register::before {
+    #cf-register::before {
         content: "";
         position: absolute;
         top: 0;
@@ -89,7 +93,7 @@
         transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
         background: var(--glow-color);
         pointer-events: none;
-    } */
+    }
 
     #cf-register::after {
         content: "";
@@ -218,15 +222,19 @@
         opacity: 1;
     }
     }
-
+    #cf-cc{
+        
+    }
 </style>
 
 <script>
-import TimerVue from './TimerVue.vue'
+import HeaderView from '@/components/HeaderView.vue';
+import TimerVue from '@/components/TimerVue.vue';
     export default {
         name: 'HomePage',
         components: {
-            TimerVue
+            TimerVue,
+            HeaderView
         }
     }
 </script>
