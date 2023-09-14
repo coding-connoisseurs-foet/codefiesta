@@ -1,22 +1,33 @@
 <template>
-    <div id="timer" class="my-3">
-        <span>battle begins in </span>
-        <div id="actual-time">
-            <span>{{ this.time.days }} days</span><br>
-            <span>{{ this.time.hour }} hours</span><br>
-            <span>{{ this.time.minute }} minutes</span><br>
-            <span>{{ this.time.second }} seconds</span>
+    <div id="countdown" style="letter-spacing: 5px;">
+        <div>
+            <span style="font-size: 2em;">{{ days }}</span>
+            <span style="font-size: 1em;"> Days</span>
+        </div>
+        <div>
+            <span style="font-size: 2em;">{{ hours }}</span>
+            <span style="font-size: 1em;"> Hours</span>
+        </div>
+        <div>
+            <span style="font-size: 2em;">{{ minutes }}</span>
+            <span style="font-size: 1em;"> Minutes</span>
+        </div>
+        <div>
+            <span style="font-size: 2em;">{{ seconds }}</span>
+            <span style="font-size: 1em;"> Seconds</span>
         </div>
     </div>
 </template>
 
 <script>
-import dayjs from 'dayjs'
 export default {
     name: 'TimerVue',
     data() {
         return {
-            time: ''
+            days: '00',
+            hours: '00',
+            minutes: '00',
+            seconds: '00'
         }
     },
     props: {
@@ -24,34 +35,45 @@ export default {
     },
     mounted() {
         this.countdown()
+        setInterval(this.countdown, 1000);
     },
     methods: {
         countdown() {
-            setInterval(() => {
-                let now = dayjs() + 5.5 * 60 * 60 * 1000
-                let then = dayjs(this.event_date)
-                let countdown = dayjs(then - now)
-                this.time = {
-                    days : countdown.format('DD') - "01",
-                    hour: countdown.hour(),
-                    minute: countdown.minute(),
-                    second: countdown.second()
-                }
-            }, 1000)
+            var current_date = new Date().getTime();
+            var target_date = new Date(this.event_date).getTime();
+            var seconds_left = (target_date - current_date) / 1000;
+
+            this.days = this.pad(parseInt(seconds_left / 86400));
+            seconds_left = seconds_left % 86400;
+
+            this.hours = this.pad(parseInt(seconds_left / 3600));
+            seconds_left = seconds_left % 3600;
+
+            this.minutes = this.pad(parseInt(seconds_left / 60));
+            this.seconds = this.pad(parseInt(seconds_left % 60));
+
+        },
+        pad(n) {
+            return (n < 10 ? '0' : '') + n;
         }
     }
 }
-
 </script>
 
 <style>
-    #timer{
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 5px;
+    #countdown{
+        color: white;
+        display: flex;
     }
-    #timer #actual-time{
-        font-size: 200%;
-        font-weight: 200;
+    #countdown div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px;
+    }
+    #countdown div span:first-child{
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #fff;
     }
 </style>
