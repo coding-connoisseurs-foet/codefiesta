@@ -1,37 +1,38 @@
 <template>
-  <HeaderView/>
-  <div class="background-image"></div>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main>
+    <Transition>
+      <HeaderView v-if="!isHome" :class="{'container-fluid px-3' : !isHome}"/>
+    </Transition>
+    <Transition>
+      <router-view/>
+    </Transition>
+  </main>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import HeaderView from './components/HeaderView.vue'
+<style>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+</style>
+
+<script>
+import HeaderView from "./components/HeaderView.vue";
 export default {
-  name: 'App',
+  name: "App",
+  computed : {
+    isHome(){
+      return this.$route.name == "home";
+    }
+  },
   components: {
-    HelloWorld,
     HeaderView
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-.background-image {
-    background-image: url(@/assets/bg-option-2.jpg);
-    background-position: 50%;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    filter: blur(3px);
-}
-</style>
