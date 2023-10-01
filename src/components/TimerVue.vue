@@ -1,19 +1,19 @@
 <template>
     <div id="countdown" style="letter-spacing: 5px;">
         <div>
-            <span style="font-size: 2em;">{{ days }}</span>
+            <span style="font-size: 2.6em;">{{ days }}</span>
             <span style="font-size: 1em;"> Days</span>
         </div>
         <div>
-            <span style="font-size: 2em;">{{ hours }}</span>
+            <span style="font-size: 2.6em;">{{ hours }}</span>
             <span style="font-size: 1em;"> Hours</span>
         </div>
         <div>
-            <span style="font-size: 2em;">{{ minutes }}</span>
+            <span style="font-size: 2.6em;">{{ minutes }}</span>
             <span style="font-size: 1em;"> Minutes</span>
         </div>
         <div>
-            <span style="font-size: 2em;">{{ seconds }}</span>
+            <span style="font-size: 2.6em;">{{ seconds }}</span>
             <span style="font-size: 1em;"> Seconds</span>
         </div>
     </div>
@@ -64,6 +64,7 @@ export default {
     #countdown{
         color: white;
         display: flex;
+        margin: 35px 32%;
     }
     #countdown div{
         display: flex;
