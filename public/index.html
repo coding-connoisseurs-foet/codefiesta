@@ -8,20 +8,22 @@
 		<style>
 			body{
 				padding: 0;
-				height:100vh;
 				margin: 0;
 				transition: 0.5s;
 				--x: calc(var(--posX, 0) * 1px);
 				--y: calc(var(--posY, 0) * 1px);
 				background-image: 
-					linear-gradient(115deg, rgb(211 255 215), rgb(184, 31, 31)), 
-					radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
-					radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
-					radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
-					radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
-					linear-gradient(60deg, #fe8d41, rgb(201, 97, 0));
+					linear-gradient(115deg, #FFDAB9, #E34234), 
+					radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), #FF4E00, #363636), 
+					radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), #000, #FF4E00), 
+					radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), #FF4500, #B7410E), 
+					radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), #FFA07A, #FFD700), 
+					linear-gradient(60deg, #fe8d41,#E34234 );
 					
 				background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
 			}
 		</style>
 		<title>CodeFiesta</title>

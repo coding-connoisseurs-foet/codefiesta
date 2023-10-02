@@ -1,5 +1,5 @@
 <template>
-	<nav class="mt-5">
+	<nav>
 		<ul class="mynav-ul flex-column flex-md-row">
 			<li v-if="this.$route.name!='home'">
 				<router-link to="/"> &LeftAngleBracket; Back to Home</router-link>
@@ -47,9 +47,9 @@ export default {
 .mynav-ul{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	list-style: none;
-	padding: 0;
+	padding-top: 3.5em;
 	margin: 0;
 }
 .mynav-ul li a{

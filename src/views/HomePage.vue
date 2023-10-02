@@ -1,14 +1,14 @@
 <template>
     <div class="container-fluid w-100 full-screen-3d-example" id="root">
-        <div class="row cf-head-wrapper p-5 justify-content-between align-items-center">
+        <div class="row cf-head-wrapper justify-content-between align-items-center">
             <div class="col-8">
-                <div class="text-md-start text-center">
-                    <TimerVue event_date="2023-10-14 11:00" />
+                <div class="text-md-start text-center" style="min-height: 100vh;">
                     <HeaderView />
-                    <h1 id="cf-head" class="my-3 text-white">
+                    <h4 class="text-white" id="cf-tagline">The flagship coding festival of Lucknow University</h4>
+                    <h1 id="cf-head" class="text-white">
                         Code Fiesta
                     </h1>
-                    <h4 class="text-white" id="cf-tagline">The flagship coding festival of FoET, Lucknow University</h4>
+                    <TimerVue event_date="2023-10-14 11:00" />
                     <div id="main-announce">
                         <a href="#" class="btn btn-lg my-5 btn-outline-light rounded-0" id="cf-register">
                             <span class="glowing-text">
@@ -30,12 +30,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
+.col-8{
+    margin: 0 auto !important;
+    width: 75% !important;
+}
+
 #cf-head {
     font-family: 'Patua One', cursive;
     animation: text-flicker 4s linear infinite;
     text-transform: uppercase;
-    font-size: 10vw;
-    min-width: 100px;
+    font-size: 12vw;
+    /* min-width: 100px; */
+    line-height: 118px;
+    text-align: center;
 }
 
 .cf-head-wrapper {
@@ -46,8 +53,10 @@
 #cf-tagline {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 5px;
-    font-size: 90%;
+    font-size: 1.7em;
     text-transform: uppercase;
+    margin-top: 4.1em;
+    text-align: center;
 }
 
 /* #cf-register{
@@ -76,6 +85,10 @@
     background: none;
     perspective: 5rem;
     letter-spacing: 5px;
+    width: 255px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
 
     -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
         0px 0px 0.5em 0px var(--glow-color);
