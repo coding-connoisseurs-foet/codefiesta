@@ -1,6 +1,6 @@
 <template>
-    <div class="container-fluid w-100 full-screen-3d-example" id="root">
-        <div class="row cf-head-wrapper justify-content-between align-items-center">
+    <div class="container-fluid w-100 p-0 m-0 full-screen-3d-example" id="root">
+        <div class="row cf-head-wrapper justify-content-between w-100 m-0 p-0 align-items-center">
             <div class="col-8">
                 <div class="text-md-start text-center" style="min-height: 100vh;">
                     <HeaderView />
@@ -20,6 +20,8 @@
                 </div>
             </div>
         </div>
+        <TimeLine/>
+        <FaqSection/>
     </div>
 </template>
 
@@ -258,13 +260,17 @@
 }</style>
 
 <script>
+import FaqSection from '@/components/FaqSection.vue';
 import HeaderView from '@/components/HeaderView.vue';
+import TimeLine from '@/components/TimeLine.vue';
 import TimerVue from '@/components/TimerVue.vue';
 export default {
     name: 'HomePage',
     components: {
-        TimerVue,
-        HeaderView
-    }
+    TimerVue,
+    HeaderView,
+    TimeLine,
+    FaqSection
+}
 }
 </script>
