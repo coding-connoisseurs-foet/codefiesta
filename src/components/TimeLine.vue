@@ -22,7 +22,7 @@
         <li v-for="(n,i) in timeLine" :key="i">
           <div>
             <time>{{ n.time }}</time> 
-            <date>&lt;{{ n.day }}&gt;</date>
+            <p class="date">&lt;{{ n.day }}&gt;</p>
             <p>{{ n.event }}</p>
           </div>
         </li>
@@ -220,7 +220,7 @@
   color: var(--orange);
   line-height: 20px;
 }
-.timeline date {
+.timeline .date {
   display: block;
   font-size: 1rem;
   font-weight: 600;

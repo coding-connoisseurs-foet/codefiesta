@@ -22,6 +22,7 @@
         </div>
         <TimeLine/>
         <FaqSection/>
+        <FooterSection/>
     </div>
 </template>
 
@@ -261,6 +262,7 @@
 
 <script>
 import FaqSection from '@/components/FaqSection.vue';
+import FooterSection from '@/components/FooterSection.vue';
 import HeaderView from '@/components/HeaderView.vue';
 import TimeLine from '@/components/TimeLine.vue';
 import TimerVue from '@/components/TimerVue.vue';
@@ -270,7 +272,8 @@ export default {
     TimerVue,
     HeaderView,
     TimeLine,
-    FaqSection
+    FaqSection,
+    FooterSection
 }
 }
 </script>
