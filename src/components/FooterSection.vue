@@ -1,13 +1,20 @@
 <template>
   <div class="footer">
     <div class="main-footer">
-      <div class="social">
-        <h3>Connect With Us</h3>
-        <ul class="social-links">
-            <li v-for="(n,i) in social" :key="i">
-                <a :href="n.link" target="_blank"> <img :src="n.logo"> <p>{{ n.handle }}</p></a>
-            </li>
-        </ul>
+        <div class="social">
+          <div class="about">
+            <a href=""><h3>Who Are We?</h3></a>
+            <p>We are Coding Coding Connoisseurs. We aim to build a close knit community of coding enthusiasts to a better network, opportunities, discussions and mentorship. The aim of the club is to improve the overall programming culture at FoET-LU.</p>
+              
+          </div>
+          <div class="media">
+              <h3>Connect With Us</h3>
+              <ul class="social-links">
+                  <li v-for="(n,i) in social" :key="i">
+                      <a :href="n.link" target="_blank"> <img :src="n.logo"> <p>{{ n.handle }}</p></a>
+                  </li>
+              </ul>
+          </div>
       </div>
       <div class="venue">
         <h3>Venue</h3>
@@ -20,6 +27,11 @@
 </template>
 
 <style>
+
+:root{
+    --white : #fff;
+}
+
 .footer {
   min-height: 50vh;
   width: 100%;
@@ -27,53 +39,140 @@
 }
 
 .slogan {
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
   font-size: 19px;
-  border-top: 1px solid #fff;
-  padding: 11px 0;
+  border-top: 1px solid var(--white);
+  padding: 20px 0;
   text-align: center;
   margin: 0;
 }
 
 .main-footer {
-  height: 450px;
+    padding-top: 22px;
+  min-height: 420px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.social, .venue {
-    width: 40%;
+.venue {
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: var(--white);
+}
+.social {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    color: var(--white);
 }
 
-.venue p,h3, .social h3{
-    text-align: left;
+.media, .about{
     width: 50%;
+    padding-left: 9%;
+}
+
+.social h3{
+    width: 60%;
+}
+
+.about p{
+    width: 78%;
+    font-size: 18px;
+    padding-left: 9px;
+}
+
+.venue p,h3{
+    text-align: left;
+    width: 303px;
     padding: 7px 5px;
+}
+
+.about a{
+    color: var(--white);
+    text-decoration: none;
 }
 
 .social-links{
     list-style-type: none;
+    width: 80%;
+    padding-left: 5px;
+}
+.social-links li{
+    width: 100%;
 }
 
 .social-links li a{
+    height: 37px;
     display: flex;
+    align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 .social-links li a img{
-    width: 32px;
+    width: 35px;
+    height: 35px;
+}
+.social-links li a p{
+    font-size: 17px;
+    margin: 0;
+    padding-left: 5px;
+    width: 100%;
 }
 
 #map{
     border: none;
     border-radius: 9px;
+    margin-left: 5px;
+}
+
+/* --------------media-querry------------ */
+@media screen and (max-width:1013px){
+    .main-footer{
+        flex-direction: column;
+    }
+
+    .social, .venue{
+        width: 100%;
+    }
+
+
+}
+@media screen and (max-width:704px){
+    .social{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .venue h3, .venue p{
+        text-align: center;
+    }
+
+    .about p{
+        text-align: center;
+    }
+
+    .about, .media{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .social-links{
+        width: fit-content;
+    }
+
+    .social h3{
+        width: fit-content;
+    }
+
 
 }
 </style>
@@ -85,32 +184,32 @@ export default {
 		return{
 			social: [
 				{
-					logo: '../assets/images/instagram.png',
+					logo: 'https://raw.githubusercontent.com/Kritikasingh2004/codefiesta/main/src/assets/images/instagram.png',
 					handle: "cod.ngclub",
                     link: "https://www.instagram.com/cod.ngclub/"
 				},
 				{
-					logo: '../assets/images/linkedin.png',
+					logo: 'https://raw.githubusercontent.com/Kritikasingh2004/codefiesta/main/src/assets/images/linkedin.png',
 					handle: "coding-connoiseurs",
                     link: "https://www.linkedin.com/company/coding-connoiseurs/"
 				},
 				{
-					logo: '../assets/images/twitter.png',
+					logo: 'https://raw.githubusercontent.com/Kritikasingh2004/codefiesta/main/src/assets/images/twitter.png',
 					handle: "ccfoet_LU",
                     link: "https://twitter.com/ccfoet_LU"
 				},
 				{
-					logo: '../assets/images/telegram.png',
+					logo: 'https://raw.githubusercontent.com/Kritikasingh2004/codefiesta/main/src/assets/images/telegram.png',
 					handle: "CC Info Group",
                     link: "https://t.me/+RaQG2y9OcqYyNTdl"
 				},
 				{
-					logo: '../assets/images/youtube.png',
+					logo: 'https://raw.githubusercontent.com/Kritikasingh2004/codefiesta/main/src/assets/images/youtube.png',
 					handle: "@codingconnoisseurs9569",
                     link: "https://www.youtube.com/@codingconnoisseurs9569"
 				},
 				{
-					logo: '../assets/images/github.png',
+					logo: 'https://raw.githubusercontent.com/Kritikasingh2004/codefiesta/main/src/assets/images/github.png',
 					handle: "Coding-Connoisseurs",
                     link: "https://github.com/Coding-Connoisseurs"
 				}

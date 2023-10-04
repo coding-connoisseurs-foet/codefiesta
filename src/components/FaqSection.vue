@@ -34,6 +34,7 @@
     cursor: pointer !important;
     position: relative;
     font-size: 20px;
+    width: 100%;
 }
 .faq .question::after{
     content: "+";
@@ -68,6 +69,16 @@
     font-size: 35px;
     top: 0;
 }
+
+/* ------------media-querry------------ */
+
+@media screen and (max-width:947px){
+    .faq{
+        width: 80%;
+    }
+
+}
+
 </style>
 
 

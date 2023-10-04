@@ -130,6 +130,7 @@
   font-size: 0;
   padding: 240px 0;
   transition: all 1s;
+  overflow-y: hidden;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
@@ -254,6 +255,13 @@
   .timeline .info {
     display: none;
   }
+}
+
+@media screen and (max-width:651px){
+    .heading{
+        font-size: 3em;
+    }
+
 }
 </style>
 

@@ -258,7 +258,18 @@
     100% {
         opacity: 1;
     }
-}</style>
+}
+
+/* --------------media-querry------------ */
+
+@media screen and (max-width:551px){
+  .col-8{
+    width: 100% !important;
+    margin: 0;
+  }
+}
+
+</style>
 
 <script>
 import FaqSection from '@/components/FaqSection.vue';

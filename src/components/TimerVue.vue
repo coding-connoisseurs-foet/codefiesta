@@ -1,20 +1,20 @@
 <template>
   <div id="countdown" style="letter-spacing: 5px">
     <div>
-      <span style="font-size: 2.6em">{{ days }}</span>
-      <span style="font-size: 1em"> Days</span>
+      <span class="cal">{{ days }}</span>
+      <span class="cap"> Days</span>
     </div>
     <div>
-      <span style="font-size: 2.6em">{{ hours }}</span>
-      <span style="font-size: 1em"> Hours</span>
+      <span class="cal">{{ hours }}</span>
+      <span class="cap"> Hours</span>
     </div>
     <div>
-      <span style="font-size: 2.6em">{{ minutes }}</span>
-      <span style="font-size: 1em"> Minutes</span>
+      <span class="cal">{{ minutes }}</span>
+      <span class="cap"> Minutes</span>
     </div>
     <div>
-      <span style="font-size: 2.6em">{{ seconds }}</span>
-      <span style="font-size: 1em"> Seconds</span>
+      <span class="cal">{{ seconds }}</span>
+      <span class="cap"> Seconds</span>
     </div>
   </div>
 </template>
@@ -60,6 +60,14 @@ export default {
 </script>
 
 <style>
+
+.cal{
+  font-size: 2.6em;
+}
+.cap{
+  font-size: 1em;
+}
+
 #countdown {
   color: white;
   display: flex;
@@ -76,5 +84,21 @@ export default {
   padding: 5px 10px;
   border-radius: 5px;
   color: #fff;
+}
+
+/* --------------media-querry------------ */
+
+@media screen and (max-width:430px){
+  .cal{
+    font-size: 1.5em;
+  }
+  #countdown{
+    width: fit-content;
+  }
+  .cap{font-size: 0.8em;}
+
+  #countdown div{
+    margin: 0 4px;
+  }
 }
 </style>
