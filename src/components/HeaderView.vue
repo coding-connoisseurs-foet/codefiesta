@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .mynav-ul{
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-around;
 	list-style: none;
 	padding-top: 3.5em;
@@ -77,6 +77,19 @@ export default {
 
 nav{
 	transition: 0.5s;
+}
+
+/* --------------media-querry------------ */
+
+@media screen and (max-width:850px){
+  .mynav-ul{
+	flex-direction: column;
+	align-items: stretch;
+  }
+
+  .mynav-ul li{
+	margin-left: 0;
+  }
 }
 
 </style>

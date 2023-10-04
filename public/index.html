@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
-		<style>
-			body{
-				padding: 0;
-				margin: 0;
-				transition: 0.5s;
-				--x: calc(var(--posX, 0) * 1px);
-				--y: calc(var(--posY, 0) * 1px);
-				background-image: 
-					linear-gradient(115deg, #FFDAB9, #E34234), 
-					radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), #FF4E00, #363636), 
-					radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), #000, #FF4E00), 
-					radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), #FF4500, #B7410E), 
-					radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), #FFA07A, #FFD700), 
-					linear-gradient(60deg, #fe8d41,#E34234 );
-					
-				background-blend-mode: overlay, overlay, difference, difference, difference, normal;
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center;
-			}
-		</style>
-		<title>CodeFiesta</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<noscript>
-			<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-		</noscript>
-		<div id="app"></div>
-		<script>
-			document.body.addEventListener("pointermove", (e)=>{
-				const { currentTarget: el, clientX: x, clientY: y } = e;
-				const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
-				el.style.setProperty('--posX',  x-l-w/2);
-				el.style.setProperty('--posY',  y-t-h/2);
-			})
-		</script>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+	<style>
+		html {
+			scroll-behavior: smooth;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+		}
+
+		*::selection{
+			color: #000;
+			background-color: #fe8d41;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			padding: 0;
+			transition: 0.5s;
+			--x: calc(var(--posX, 0) * 1px);
+			--y: calc(var(--posY, 0) * 1px);
+			background:
+				linear-gradient(115deg, #FFDAB9, #E34234),
+				radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), #FF4E00, #363636),
+				radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), #000, #FF4E00),
+				radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), #FF4500, #B7410E),
+				radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), #FFA07A, #FFD700),
+				linear-gradient(60deg, #fe8d41, #E34234);
+
+			background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		body::-webkit-scrollbar {
+			display: none;
+		}
+	</style>
+	<title>CodeFiesta</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<noscript>
+		<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+				Please enable it to continue.</strong>
+	</noscript>
+	<div id="app"></div>
+	<script>
+		document.body.addEventListener("pointermove", (e) => {
+			const { currentTarget: el, clientX: x, clientY: y } = e;
+			const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+			el.style.setProperty('--posX', x - l - w / 2);
+			el.style.setProperty('--posY', y - t - h / 2);
+		})
+	</script>
+</body>
+
 </html>
