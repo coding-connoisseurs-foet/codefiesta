@@ -4,15 +4,16 @@
             <span>FREQUENTLY ASKED QUESTIONS</span>
         </h1>
         <div class="faq">
-            <div class="question-cont" v-for="(n,i) in faq" :key="i">
+            <div class="question-cont" v-for="(n,i) in faq" :key="i" @click="toggleAnswer(i)"
+        :class="{ active: activeQuestion === i }">
                 <div class="question">{{n.question}}</div>
-                <div class="answer">{{n.answer}}</div>
+                <div class="answer" :class="{ active: activeQuestion === i }">{{n.answer}}</div>
             </div>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
 .faq-section{
     min-height: 100vh;
   background: linear-gradient(#0000008b, #000);
@@ -46,20 +47,27 @@
 .faq .answer{
     padding-top: 9px;
     width: 100%;
-    height: 0px;
+    opacity: 0;
+    max-height: 0px;
     font-size: 18px;
     overflow: hidden;
     padding-left: 7px;
-    transition: .5s;
+    transition: all 0.5s ease;
 }
 
 .faq .question-cont.active .answer {
-    height: fit-content;
+    max-height: 700px;
+    opacity: 1;
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 9px;
 }
 
 .faq .question-cont.active .question {
+    color: #fe8d41;
+    border-color: #fe8d41;
+    
+}
+.faq .question:hover {
     color: #fe8d41;
     border-color: #fe8d41;
     
@@ -83,15 +91,6 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const questions = document.querySelectorAll(".question-cont");
-
-    questions.forEach(function(question) {
-        question.addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
-    });
-});
 
 export default {
 	name: "FrequentlyAskedQuestions",
@@ -123,9 +122,14 @@ export default {
 					answer: "Brain and laptop."
 				}
 				
-			]
+			], activeQuestion: null,
 		}
-	}
+	},
+    methods: {
+    toggleAnswer(index) {
+      this.activeQuestion = this.activeQuestion === index ? null : index;
+    },
+  },
 };
 
 
