@@ -3,30 +3,23 @@
     <h1 class="heading"><span>The fiesta timeline</span></h1>
     <section class="timeline">
       <div class="info">
-        <img
-          width="200"
-          height="200"
-          src="../../public/cc-logo.svg"
-          alt=""
-        />
+        <img width="200" height="200" src="../../public/cc-logo.svg" alt="" />
         <h2>CODE FIESTA</h2>
         <p>
-          This is how the sequence of events will take place at the the flagship coding event of Lucknow University.
-        </p>
-        <p>
-            <router-link to="/events" class="link">Know More &gt;</router-link>
+          This is how the sequence of events will take place at the the flagship
+          coding event of Lucknow University.
         </p>
       </div>
 
       <ol>
-        <li v-for="(n,i) in timeLine" :key="i">
+        <li v-for="(n, i) in timeLine" :key="i">
           <div>
-            <time>{{ n.time }}</time> 
+            <time>{{ n.time }}</time>
             <p class="date">&lt;{{ n.day }}&gt;</p>
             <p>{{ n.event }}</p>
           </div>
         </li>
-        
+
         <li></li>
       </ol>
     </section>
@@ -38,7 +31,7 @@
   --white: #fff;
   --black: #323135;
   --crystal: #e4e3e3;
-  --orange: #FF4E00;
+  --orange: #ff4e00;
   --yellow: #e5f33d;
 }
 .timeline-sec {
@@ -52,17 +45,17 @@
 }
 
 .heading {
-  font-family: 'Patua One', cursive;
+  font-family: "Patua One", cursive;
   animation: text-flicker 4s linear infinite;
   text-transform: uppercase;
   font-size: 4em;
   text-align: center;
-  padding: 3.5% 0 2.4% 0;
+  padding: 3.5% 0 2.5% 0;
 }
 
-.heading span{
-    color: #000;
-    background-color: #fe8d41;
+.heading span {
+  color: #000;
+  background-color: #fe8d41;
 }
 
 .timeline {
@@ -95,31 +88,21 @@
   background: var(--orange);
   white-space: normal;
   border-radius: 10px;
-  height: 480px;
+  height: 423px;
 }
 
 .timeline .info img {
   margin-bottom: 20px;
 }
 .timeline .info h2 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-weight: 600;
 }
 
 .timeline .info p {
   margin-top: 10px;
-  color: var(--crystal);
-}
-
-.timeline .info .link {
-  text-decoration: none;
-  color: var(--black);
-  cursor: pointer;
-  font-size: 1.1em;
-}
-.timeline .info .link:hover {
   color: var(--white);
-  font-size: 1.2em;
 }
 
 .timeline ol::-webkit-scrollbar {
@@ -128,13 +111,15 @@
 
 .timeline ol {
   font-size: 0;
-  padding: 240px 0;
+  height: 423px;
+  padding-top: 216px;
+  margin: 0;
   transition: all 1s;
   overflow-y: hidden;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
-   scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .timeline ol li {
@@ -145,7 +130,7 @@
   height: 5px;
   background: var(--white);
   scroll-snap-align: start;
-  cursor:default;
+  cursor: default;
 }
 
 .timeline ol li:last-child {
@@ -257,99 +242,96 @@
   }
 }
 
-@media screen and (max-width:651px){
-    .heading{
-        font-size: 3em;
-    }
-
+@media screen and (max-width: 651px) {
+  .heading {
+    font-size: 3em;
+  }
 }
 </style>
 
 <script>
 export default {
-	name: "TimeShedule",
-	data(){
-		return{
-			timeLine: [
-				{
-					time: "9:00 am",
-					day: "DAY 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				},
-				{
-					time: "9:00 am",
-					day: "Day 1",
-					event: "Hello World"
-				}
-				
-			]
-		}
-	}
+  name: "TimeShedule",
+  data() {
+    return {
+      timeLine: [
+        {
+          time: "9:00 am",
+          day: "DAY 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+        {
+          time: "9:00 am",
+          day: "Day 1",
+          event: "Hello World",
+        },
+      ],
+    };
+  },
 };
-
 </script>

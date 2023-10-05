@@ -43,8 +43,7 @@
     animation: text-flicker 4s linear infinite;
     text-transform: uppercase;
     font-size: 12vw;
-    /* min-width: 100px; */
-    line-height: 118px;
+    line-height: 0.6em;
     text-align: center;
 }
 
@@ -61,12 +60,6 @@
     margin-top: 4.1em;
     text-align: center;
 }
-
-/* #cf-register{
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        transition: 0.2s ease-in-out;
-    } */
 
 @keyframes slow {
     0% {

@@ -124,6 +124,10 @@
     width: 100%;
 }
 
+.main-footer p:hover{
+    color: #ff4522;
+}
+
 #map{
     border: none;
     border-radius: 9px;
