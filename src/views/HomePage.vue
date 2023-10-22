@@ -8,21 +8,22 @@
                     <h1 id="cf-head" class="text-white">
                         Code Fiesta
                     </h1>
-                    <TimerVue event_date="2023-10-14 11:00" />
+                    <TimerVue event_date="2023-11-14 11:00" />
                     <div id="main-announce">
-                        <a href="#" class="btn btn-lg my-5 btn-outline-light rounded-0" id="cf-register">
-                            <span class="glowing-text">
-                                REGISTER NOW
-                            </span>
-                        </a>
+                        <!-- <a href="/register" class="btn btn-lg my-5 btn-outline-light rounded-0" id="cf-register">
+                            <span class="glowing-text">REGISTER NOW</span>
+                        </a> -->
+                        <router-link to="/register" class="btn btn-lg my-5 btn-outline-light rounded-0"
+                            id="cf-register"><span class="glowing-text">REGISTER NOW</span></router-link>
                     </div>
+                    <RegisterForm />
 
                 </div>
             </div>
         </div>
-        <TimeLine/>
-        <FaqSection/>
-        <FooterSection/>
+        <TimeLine />
+        <FaqSection />
+        <FooterSection />
     </div>
 </template>
 
@@ -33,7 +34,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 
-.col-8{
+.col-8 {
     margin: 0 auto !important;
     width: 75% !important;
 }
@@ -255,13 +256,12 @@
 
 /* --------------media-querry------------ */
 
-@media screen and (max-width:551px){
-  .col-8{
-    width: 100% !important;
-    margin: 0;
-  }
+@media screen and (max-width:551px) {
+    .col-8 {
+        width: 100% !important;
+        margin: 0;
+    }
 }
-
 </style>
 
 <script>
@@ -273,11 +273,11 @@ import TimerVue from '@/components/TimerVue.vue';
 export default {
     name: 'HomePage',
     components: {
-    TimerVue,
-    HeaderView,
-    TimeLine,
-    FaqSection,
-    FooterSection
-}
+        TimerVue,
+        HeaderView,
+        TimeLine,
+        FaqSection,
+        FooterSection
+    }
 }
 </script>

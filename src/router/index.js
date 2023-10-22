@@ -4,6 +4,7 @@ import EventsPage from '../views/EventsPage.vue'
 import SponsorPage from '../views/SponsorPage.vue'
 import TeamPage from '../views/TeamPage.vue'
 import SchedulePage from '../views/SchedulePage.vue'
+import RegistrationPage from '../views/RegistrationPage.vue'
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: '/schedule',
     name: 'schedule',
     component: SchedulePage
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: RegistrationPage
   }
 ]
 

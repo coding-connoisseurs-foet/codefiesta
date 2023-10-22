@@ -7,7 +7,7 @@
 			<li v-for="(n,i) in navItems" v-show="this.$route.name=='home'" :key="i">
 				<router-link :to="n.link">{{n.name}}</router-link>
 			</li>
-			<li v-if="this.$route.name!='home'">
+			<li v-if="this.$route.name!='register' && this.$route.name!='home'">
 				<router-link to="/register">Register Now</router-link>
 			</li>
 		</ul>
