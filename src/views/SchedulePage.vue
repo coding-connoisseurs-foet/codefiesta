@@ -1,8 +1,8 @@
+
 <template>
-    <div class="container" id="schedule">
-        <h1 class="text-white">
-            Hello there this is Schedule section
-        </h1>
+    <div class="w-100" id="schedule">
+        <TimeLine/>
+        <EventsPage />
     </div>
 </template>
 
@@ -11,3 +11,14 @@
     min-height: 100vh;
 }
 </style>
+
+<script>
+import EventsPage from '@/components/EventsPage.vue';
+import TimeLine from '@/components/TimeLine.vue';
+
+export default{
+    name: "schedulePage",
+    components: { TimeLine, EventsPage }
+}
+
+</script>

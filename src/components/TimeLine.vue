@@ -85,7 +85,11 @@
   justify-content: center;
   padding: 0 40px;
   color: var(--white);
-  background: var(--orange);
+  background: rgb(255, 77, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(255, 77, 0, 0.3);
+  z-index: 10;
+  border: 2px solid rgba(255, 77, 0, 0.7);
+  backdrop-filter: blur(25px);
   white-space: normal;
   border-radius: 10px;
   height: 423px;
@@ -162,9 +166,18 @@
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
-  color: var(--black);
-  background: var(--white);
+  color: var(--white);
+  background: rgb(255, 255, 255, 0.1);
+  border: 2px solid rgb(255, 255, 255, 0.7);
+  z-index: 9;
+  backdrop-filter: blur(25px);
   border-radius: 0 10px 10px 10px;
+}
+.timeline ol li div:hover {
+  background: rgb(255, 255, 255, 0.3);
+  border: 2px solid rgb(255, 255, 255, 0.9);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
 }
 
 .timeline ol li div::before {
@@ -211,14 +224,13 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #717070;
+  color: #e3e3e3;
   text-transform: uppercase;
 }
 .timeline p {
   display: block;
   font-size: 1.1rem;
   margin-left: 5px;
-  color: #000;
 }
 
 /* MEDIA QUERIES

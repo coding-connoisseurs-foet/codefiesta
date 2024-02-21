@@ -1,8 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
-import EventsPage from '../views/EventsPage.vue'
 import SponsorPage from '../views/SponsorPage.vue'
-import TeamPage from '../views/TeamPage.vue'
 import SchedulePage from '../views/SchedulePage.vue'
 import RegistrationPage from '../views/RegistrationPage.vue'
 
@@ -13,29 +11,34 @@ const routes = [
     component: HomePage
   },
   {
-    path: '/team',
-    name: 'team',
-    component: TeamPage
-  },
-  {
-    path: '/events',
-    name: 'events',
-    component: EventsPage
-  },
-  {
     path: '/sponsors',
     name: 'sponsors',
     component: SponsorPage
   },
   {
-    path: '/team',
-    name: 'team',
-    component: TeamPage
+    path: '/community',
+    name: 'community partners',
+    component: () => import("../views/CommunityPartners.vue")
   },
   {
     path: '/schedule',
     name: 'schedule',
     component: SchedulePage
+  },
+  {
+    path: '/speakers',
+    name: 'Speakers',
+    component: () => import("../views/SpeakerPage.vue")
+  },
+  {
+    path: '/faq',
+    name: 'Faq',
+    component: () => import("../views/FaqSection.vue")
+  },
+  {
+    path: '/aboutus',
+    name: 'AboutUs',
+    component: () => import("../views/AboutUs.vue")
   },
   {
     path: '/register',
