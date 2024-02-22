@@ -1,13 +1,17 @@
 <template>
-	<nav>
-		<ul class="mynav-ul flex-column flex-md-row">
+	<nav class="w-100">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+		<ul class="w-100 mynav-ul d-flex flex-column flex-md-row">
 			<li v-if="this.$route.name!='home'">
 				<router-link to="/"> &LeftAngleBracket; Back to Home</router-link>
 			</li>
+
 			<li v-for="(n,i) in navItems" v-show="this.$route.name=='home'" :key="i">
 				<router-link :to="n.link">{{n.name}}</router-link>
 			</li>
-			<li v-if="this.$route.name!='home'">
+			<li v-if="this.$route.name!='register' && this.$route.name!='home'">
 				<router-link to="/register">Register Now</router-link>
 			</li>
 		</ul>
@@ -21,21 +25,29 @@ export default {
 		return{
 			navItems: [
 				{
-					name: "Events",
-					link: "/events"
+					name: "About Us",
+					link: "/aboutus"
 				},
 				{
 					name: "Schedule",
 					link: "/schedule"
 				},
 				{
+					name: "FAQs",
+					link: "/faq"
+				},
+				{
+					name: "Speakers",
+					link: "/speakers"
+				},
+				{
 					name: "Sponsors",
 					link: "/sponsors"
 				},
 				{
-					name: "Team",
-					link: "/team"
-				}
+					name: "Community Partners",
+					link: "/community"
+				},
 			]
 		}
 	}
@@ -44,12 +56,14 @@ export default {
 </script>
 
 <style scoped>
+nav{
+	height: 15vh;
+}
 .mynav-ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
 	list-style: none;
-	padding-top: 3.5em;
+	padding-top: 2em;
 	margin: 0;
 }
 .mynav-ul li a{
@@ -77,6 +91,19 @@ export default {
 
 nav{
 	transition: 0.5s;
+}
+
+/* --------------media-querry------------ */
+
+@media screen and (max-width:850px){
+  .mynav-ul{
+	flex-direction: column;
+	align-items: stretch;
+  }
+
+  .mynav-ul li{
+	margin-left: 0;
+  }
 }
 
 </style>
