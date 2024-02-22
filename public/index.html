@@ -7,22 +7,28 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="icon" href="<%= BASE_URL %>favicon.ico">
 	<style>
+		:root {
+			--theme1: #fe8d41;
+		}
+
 		html {
 			scroll-behavior: smooth;
 			-ms-overflow-style: none;
 			scrollbar-width: none;
 		}
 
-		*::selection{
+		*::selection {
 			color: #000;
 			background-color: #fe8d41;
 		}
 
 		body {
+			width: 100% !important;
 			padding: 0;
 			margin: 0;
 			padding: 0;
-			transition: 0.5s;
+			background-color: #000 !important;
+			/* transition: 0.5s;
 			--x: calc(var(--posX, 0) * 1px);
 			--y: calc(var(--posY, 0) * 1px);
 			background:
@@ -36,7 +42,7 @@
 			background-blend-mode: overlay, overlay, difference, difference, difference, normal;
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: center;
+			background-position: center; */
 		}
 
 		body::-webkit-scrollbar {
@@ -53,12 +59,12 @@
 	</noscript>
 	<div id="app"></div>
 	<script>
-		document.body.addEventListener("pointermove", (e) => {
-			const { currentTarget: el, clientX: x, clientY: y } = e;
-			const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
-			el.style.setProperty('--posX', x - l - w / 2);
-			el.style.setProperty('--posY', y - t - h / 2);
-		})
+		//document.body.addEventListener("pointermove", (e) => {
+		//	const { currentTarget: el, clientX: x, clientY: y } = e;
+		//	const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+		//	el.style.setProperty('--posX', x - l - w / 2);
+		//	el.style.setProperty('--posY', y - t - h / 2);
+		//})
 	</script>
 </body>
 

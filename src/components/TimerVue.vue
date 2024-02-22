@@ -1,5 +1,5 @@
 <template>
-  <div id="countdown" style="letter-spacing: 5px">
+  <div id="countdown" style="letter-spacing: 5px" class="z-1">
     <div>
       <span class="cal">{{ days }}</span>
       <span class="cap"> Days</span>
@@ -62,23 +62,25 @@ export default {
 <style>
 
 .cal{
-  font-size: 2.6em;
+  font-size: 2.7vw;
+  font-weight: 500;
 }
 .cap{
-  font-size: 1em;
+  font-size: 0.9vw;
+  font-weight: 600;
 }
 
 #countdown {
   color: white;
   display: flex;
-  margin: 35px auto;
-  width: 417px;
+  margin: 25px 0;
+  width: fit-content;
 }
 #countdown div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 10px;
+  margin: 0 9px;
 }
 #countdown div span:first-child {
   padding: 5px 10px;
