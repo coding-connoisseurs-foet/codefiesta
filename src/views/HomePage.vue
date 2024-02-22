@@ -8,7 +8,7 @@
                     <h1 id="cf-head" class="text-white">
                         Code Fiesta
                     </h1>
-                    <TimerVue event_date="2023-10-14 11:00" />
+                    <TimerVue event_date="2023-11-17 11:00" />
                     <div id="main-announce">
                         <a href="#" class="btn btn-lg my-5 btn-outline-light rounded-0" id="cf-register">
                             <span class="glowing-text">
