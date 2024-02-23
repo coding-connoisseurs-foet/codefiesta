@@ -52,7 +52,7 @@ nav{
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	list-style: none;
-	padding-top: 1.5em;
+	padding-top: 2.3em;
 	margin: 0;
 }
 .mynav-ul li a{
