@@ -1,6 +1,6 @@
 <template>
   <div class="timeline-sec">
-    <h1 class="heading"><span>The fiesta timeline</span></h1>
+    <h1 class="heading" style="padding: 2%; margin: 0;"><span>The fiesta timeline</span></h1>
     <section class="timeline">
       <div class="info">
         <img width="200" height="200" src="../../public/cc-logo.svg" alt="" />
@@ -41,7 +41,6 @@
   background: linear-gradient(#000, #0000008b);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 
 .heading {

@@ -30,11 +30,12 @@
 }
 
 .skyline {
-  background: url(./assets/images/places/lucknow_illustration.png);
+  background: linear-gradient(#0000009c, #0000009c), url(./assets/images/places/lucknow_illustration.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 85vh;
+  background-attachment: fixed;
 }
 </style>
 

@@ -1,6 +1,6 @@
 
 <template>
-    <div class="w-100 skyline" id="schedule">
+    <div  id="schedule">
         <TimeLine/>
         <EventsPage />
     </div>
