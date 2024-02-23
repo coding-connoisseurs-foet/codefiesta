@@ -56,6 +56,7 @@
 .heading span {
   color: #000;
   background-color: #fe8d41;
+  padding: 0 7px;
 }
 
 .timeline {
