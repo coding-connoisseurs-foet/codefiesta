@@ -1,8 +1,5 @@
 <template>
 	<nav class="w-100">
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 		<ul class="w-100 mynav-ul d-flex flex-column flex-md-row">
 			<li v-if="this.$route.name!='home'">
 				<router-link to="/"> &LeftAngleBracket; Back to Home</router-link>
@@ -87,10 +84,12 @@ nav{
 
 /* --------------media-querry------------ */
 
-@media screen and (max-width:850px){
+@media screen and (max-width:770px){
   .mynav-ul{
 	flex-direction: column;
 	align-items: stretch;
+	padding-top: 0;
+	z-index: 10;
   }
 
   .mynav-ul li{
