@@ -78,34 +78,34 @@
               roundNo: "",
               rounds: [
                 {
-                  des: "The participants will be given a new word every 4 minutes which they will have to incorporate in their prose. Total of 4 words + 1 bonus word will be given.",
+                  des: "",
                 },
                 {
-                  des: "Not incorporating the 4 mandatory words in composition will lead to disqualification.",
+                  des: "",
                 },
                 {
-                  des: "Incorporating the bonus word will lead to bonus points being granted.",
+                  des: "",
                 },
               ],
             },
           ],
           timeBreakdown: [
             {
-              des: "Introduction and Prompt Explanation (5 minutes)",
+              des: "",
             },
             {
-              des: "Brainstorming and Planning (7 minutes)",
+              des: "",
             },
             {
-              des: "Writing Time (20 minutes)",
+              des: "",
             },
             {
-              des: "Submission and Closing (3 minutes)",
+              des: "",
             },
           ],
           judgingCriteria: [
             {
-              des: "Entries must be an original piece of work- plagiarism of any sort if detected will result in immediate disqualification.",
+              des: "",
             },
           ],
           participationFee: "TBD",
