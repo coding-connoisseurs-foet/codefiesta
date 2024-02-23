@@ -33,20 +33,12 @@ export default {
 					link: "/schedule"
 				},
 				{
-					name: "FAQs",
-					link: "/faq"
-				},
-				{
 					name: "Speakers",
 					link: "/speakers"
 				},
 				{
 					name: "Sponsors",
 					link: "/sponsors"
-				},
-				{
-					name: "Community Partners",
-					link: "/community"
 				},
 			]
 		}
@@ -63,7 +55,7 @@ nav{
 	flex-wrap: nowrap;
 	justify-content: space-evenly;
 	list-style: none;
-	padding-top: 2em;
+	padding-top: 1.5em;
 	margin: 0;
 }
 .mynav-ul li a{

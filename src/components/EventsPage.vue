@@ -1,5 +1,6 @@
 <template>
-    <div class="container" id="events">
+    <div class="sticky-parent" id="events">
+        <h1>Day1</h1>
         <div class="row justify-content-start">
             <EventVue v-for="event in events" :event="event" :key="event.id"></EventVue>
         </div>

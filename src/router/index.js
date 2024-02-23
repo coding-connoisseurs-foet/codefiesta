@@ -16,11 +16,6 @@ const routes = [
     component: SponsorPage
   },
   {
-    path: '/community',
-    name: 'community partners',
-    component: () => import("../views/CommunityPartners.vue")
-  },
-  {
     path: '/schedule',
     name: 'schedule',
     component: SchedulePage
@@ -29,11 +24,6 @@ const routes = [
     path: '/speakers',
     name: 'Speakers',
     component: () => import("../views/SpeakerPage.vue")
-  },
-  {
-    path: '/faq',
-    name: 'Faq',
-    component: () => import("../views/FaqSection.vue")
   },
   {
     path: '/aboutus',
