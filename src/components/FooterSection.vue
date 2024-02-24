@@ -179,6 +179,12 @@
 
 
 }
+
+@media screen and (max-width:308px) {
+    iframe{
+        width: 80%;
+    }
+}
 </style>
 
 <script>

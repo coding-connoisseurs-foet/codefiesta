@@ -62,11 +62,11 @@ export default {
 <style>
 
 .cal{
-  font-size: 2.7vw;
+  font-size: 2.6em;
   font-weight: 500;
 }
 .cap{
-  font-size: 0.9vw;
+  font-size: 0.em;
   font-weight: 600;
 }
 
@@ -92,15 +92,25 @@ export default {
 
 @media screen and (max-width:430px){
   .cal{
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
   #countdown{
     width: fit-content;
   }
-  .cap{font-size: 0.8em;}
+  .cap{font-size: 0.85em;}
 
   #countdown div{
     margin: 0 4px;
+  }
+}
+@media screen and (max-width:290px){
+  .cal{
+    font-size: 1.5em;
+  }
+  .cap{font-size: 0.7em;}
+
+  #countdown div{
+    margin: 0 3px;
   }
 }
 </style>

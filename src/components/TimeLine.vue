@@ -43,21 +43,6 @@
   flex-direction: column;
 }
 
-.heading {
-  font-family: "Patua One", cursive;
-  animation: text-flicker 4s linear infinite;
-  text-transform: uppercase;
-  font-size: 4em;
-  text-align: center;
-  padding: 3.5% 0 2.5% 0;
-}
-
-.heading span {
-  color: #000;
-  background-color: #fe8d41;
-  padding: 0 7px;
-}
-
 .timeline {
   position: relative;
   white-space: nowrap;
@@ -251,12 +236,6 @@
 
   .timeline .info {
     display: none;
-  }
-}
-
-@media screen and (max-width: 651px) {
-  .heading {
-    font-size: 3em;
   }
 }
 </style>

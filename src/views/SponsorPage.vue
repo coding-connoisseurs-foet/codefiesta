@@ -4,7 +4,7 @@
       <h1 class="heading">
         <span>Community Partners</span>
       </h1>
-      <div class="image-cont">
+      <div class="image-cont h-80">
         <div class="image" v-for="com in community" :key="com.name">
           <img :src="com.logo" :alt="com.name" />
         </div>
@@ -83,15 +83,15 @@ export default {
 }
 
 .community .image {
-  height: 30vh;
-  width: 15vw;
+  height: 210px;
+  width: 230px;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(25px);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2% 8%;
+  margin: 2% 2%;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);

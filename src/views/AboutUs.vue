@@ -93,12 +93,24 @@
 
 .gallery .image img{
   width: 29%;
-  padding: 1%;
+  margin: 1%;
 }
 .gallery .image img:hover{
   cursor: pointer;
   width: 30%;
-  padding: 0;
+  margin: 0.5%;
+}
+
+@media screen and (max-width:750px) {
+  .gallery .image img{
+  width: 69%;
+  margin: 1%;
+}
+.gallery .image img:hover{
+  cursor: pointer;
+  width: 70%;
+  margin: 0.5%;
+}
 }
 
 

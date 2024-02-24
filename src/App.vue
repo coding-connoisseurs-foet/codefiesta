@@ -27,6 +27,9 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .skyline {
