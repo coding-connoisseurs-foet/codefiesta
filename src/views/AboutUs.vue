@@ -21,10 +21,15 @@
     <h1 class="heading"><span>About Us</span></h1>
     <div class="about-content">
       <p>
-        Coding Connoisseurs is a group of coding enthusiasts with the aim of building a community that introduces the students to a better network, provides them with opportunities and mentorship, and helps them learn and grow more each day.
+        Coding Connoisseurs is a group of coding enthusiasts with the aim of
+        building a community that introduces the students to a better network,
+        provides them with opportunities and mentorship, and helps them learn
+        and grow more each day.
       </p>
       <p>
-        The club was established in 2019 and since then has been working tirelessly to improve the overall programming culture at FoET LU by hosting a plethora of community events and seminars.
+        The club was established in 2019 and since then has been working
+        tirelessly to improve the overall programming culture at FoET LU by
+        hosting a plethora of community events and seminars.
       </p>
       <p>
         The club hopes to be home to a diverse range of people striving to
@@ -34,9 +39,9 @@
     </div>
     <div class="gallery">
       <h1 class="heading"><span>Code Fiesta 1.0 gallery</span></h1>
-        <div class="image">
-          <!-- <img :src="image.logo" :alt="image.id" v-for="image in images" :key="image.id" /> -->
-        </div>
+      <div class="image">
+        <!-- <img v-bind:src="image.logo" :alt="image.id" v-for="image in gallery" :key="image.id" /> -->
+      </div>
     </div>
   </div>
   <FaqSection />
@@ -57,7 +62,7 @@
   margin-bottom: 50px;
 }
 
-.about-content:hover{
+.about-content:hover {
   background-color: rgb(255, 77, 0, 0.1);
   border: 1px solid rgb(255, 77, 0, 0.7);
 }
@@ -68,7 +73,7 @@
   font-size: 1.5em;
 }
 
-.gallery{
+.gallery {
   min-height: 100vh;
 }
 </style>
@@ -80,5 +85,35 @@ import FooterSection from "@/components/FooterSection.vue";
 export default {
   name: "AboutUs",
   components: { FooterSection, FaqSection },
+  // data() {
+  //   return {
+  //     gallery: [
+  //       {
+  //         id: 1,
+  //         logo: require("../assets/images/gallery/a.JPG"),
+  //       },
+  //       {
+  //         id: 2,
+  //         logo: require("../assets/images/gallery/b.JPG"),
+  //       },
+  //       {
+  //         id: 3,
+  //         logo: require("../assets/images/gallery/c.JPG"),
+  //       },
+  //       {
+  //         id: 4,
+  //         logo: require("../assets/images/gallery/d.JPG"),
+  //       },
+  //       {
+  //         id: 5,
+  //         logo: require("../assets/images/gallery/e.JPG"),
+  //       },
+  //       {
+  //         id: 6,
+  //         logo: require("../assets/images/gallery/f.JPG"),
+  //       },
+  //     ],
+  //   };
+  // },
 };
 </script>

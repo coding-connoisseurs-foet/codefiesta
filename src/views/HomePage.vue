@@ -11,10 +11,9 @@
           <h1 id="cf-head" class="text-white">Code Fiesta</h1>
           <TimerVue event_date="2024-04-04 11:00" />
           <div id="main-announce">
-            <router-link
-              to="/register"
+            <a href="https://lu.ma/s1ah6f4l"
               class="btn btn-lg mt-2 btn-outline-light rounded-0 cf-register"
-              ><span class="glowing-text">REGISTER NOW</span></router-link
+              ><span class="glowing-text">REGISTER NOW</span></a
             >
           </div>
           <RegisterForm />
