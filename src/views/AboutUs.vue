@@ -21,10 +21,15 @@
     <h1 class="heading"><span>About Us</span></h1>
     <div class="about-content">
       <p>
-        Coding Connoisseurs is a group of coding enthusiasts with the aim of building a community that introduces the students to a better network, provides them with opportunities and mentorship, and helps them learn and grow more each day.
+        Coding Connoisseurs is a group of coding enthusiasts with the aim of
+        building a community that introduces the students to a better network,
+        provides them with opportunities and mentorship, and helps them learn
+        and grow more each day.
       </p>
       <p>
-        The club was established in 2019 and since then has been working tirelessly to improve the overall programming culture at FoET LU by hosting a plethora of community events and seminars.
+        The club was established in 2019 and since then has been working
+        tirelessly to improve the overall programming culture at FoET LU by
+        hosting a plethora of community events and seminars.
       </p>
       <p>
         The club hopes to be home to a diverse range of people striving to
@@ -34,9 +39,14 @@
     </div>
     <div class="gallery">
       <h1 class="heading"><span>Code Fiesta 1.0 gallery</span></h1>
-        <div class="image">
-          <!-- <img :src="image.logo" :alt="image.id" v-for="image in images" :key="image.id" /> -->
-        </div>
+      <div class="image">
+        <img
+          v-for="gal in gallery"
+          :key="gal.id"
+          v-bind:src="gal.image"
+          :alt="gal.id"
+        />
+      </div>
     </div>
   </div>
   <FaqSection />
@@ -57,7 +67,7 @@
   margin-bottom: 50px;
 }
 
-.about-content:hover{
+.about-content:hover {
   background-color: rgb(255, 77, 0, 0.1);
   border: 1px solid rgb(255, 77, 0, 0.7);
 }
@@ -68,9 +78,30 @@
   font-size: 1.5em;
 }
 
-.gallery{
+.gallery {
   min-height: 100vh;
+  width: 100%;
 }
+
+.gallery .image{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.gallery .image img{
+  width: 29%;
+  padding: 1%;
+}
+.gallery .image img:hover{
+  cursor: pointer;
+  width: 30%;
+  padding: 0;
+}
+
+
 </style>
 
 <script>
@@ -79,6 +110,36 @@ import FooterSection from "@/components/FooterSection.vue";
 
 export default {
   name: "AboutUs",
+  data() {
+    return {
+      gallery: [
+        {
+          id: 1,
+          image: require("../assets/images/gallery/gal1.svg"),
+        },
+        {
+          id: 2,
+          image: require("../assets/images/gallery/gal2.svg"),
+        },
+        {
+          id: 3,
+          image: require("../assets/images/gallery/gal3.svg"),
+        },
+        {
+          id: 4,
+          image: require("../assets/images/gallery/gal4.svg"),
+        },
+        {
+          id: 5,
+          image: require("../assets/images/gallery/gal5.svg"),
+        },
+        {
+          id: 6,
+          image: require("../assets/images/gallery/gal6.svg"),
+        },
+      ],
+    };
+  },
   components: { FooterSection, FaqSection },
 };
 </script>

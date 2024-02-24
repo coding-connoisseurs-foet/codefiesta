@@ -97,7 +97,7 @@ export default {
   box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
 }
 
-.image:hover {
+.community .image:hover {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
