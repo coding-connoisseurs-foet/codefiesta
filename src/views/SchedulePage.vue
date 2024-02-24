@@ -1,15 +1,12 @@
 
 <template>
-    <div class="w-100" id="schedule">
+    <div  id="schedule">
         <TimeLine/>
         <EventsPage />
     </div>
 </template>
 
-<style scoped>
-#schedule{
-    min-height: 100vh;
-}
+<style>
 </style>
 
 <script>

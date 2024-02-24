@@ -21,15 +21,21 @@
     url(./assets/images/places/rumi_darwaza.svg);
   background-position: center;
   background-size: cover;
-  min-height: fit-content;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.skyline{
-  background: url(./assets/images/places/lucknow_illustration.png);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 85vh;
+.skyline {
+  background: linear-gradient(#0000009c, #0000009c), url(./assets/images/places/lucknow_illustration.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 85vh;
+  background-attachment: fixed;
 }
 </style>
 

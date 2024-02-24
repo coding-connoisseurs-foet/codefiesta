@@ -11,11 +11,9 @@
           <h1 id="cf-head" class="text-white">Code Fiesta</h1>
           <TimerVue event_date="2024-04-04 11:00" />
           <div id="main-announce">
-            <router-link
-              to="/register"
-              class="btn btn-lg mt-2 btn-outline-light rounded-0"
-              id="cf-register"
-              ><span class="glowing-text">REGISTER NOW</span></router-link
+            <a href="https://lu.ma/s1ah6f4l"
+              class="btn btn-lg mt-2 btn-outline-light rounded-0 cf-register"
+              ><span class="glowing-text">REGISTER NOW</span></a
             >
           </div>
           <RegisterForm />
@@ -66,7 +64,7 @@
   }
 }
 
-#cf-register {
+.cf-register {
   position: relative;
   color: var(--glow-color);
   cursor: pointer;
@@ -89,7 +87,7 @@
   animation: border-flicker 2s linear infinite;
 }
 
-#cf-register::before {
+.cf-register::before {
   content: "";
   position: absolute;
   top: 0;
@@ -103,7 +101,7 @@
   pointer-events: none;
 }
 
-#cf-register::after {
+.cf-register::after {
   content: "";
   position: absolute;
   top: 0;
@@ -117,18 +115,18 @@
   transition: opacity 100ms linear;
 }
 
-#cf-register:hover {
+.cf-register:hover {
   color: rgba(0, 0, 0, 0.8);
   text-shadow: none;
   animation: none;
 }
 
-#cf-register:hover:before {
+.cf-register:hover:before {
   filter: blur(1.5em);
   opacity: 1;
 }
 
-#cf-register:hover:after {
+.cf-register:hover:after {
   opacity: 1;
 }
 
