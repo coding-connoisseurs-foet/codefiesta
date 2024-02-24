@@ -40,7 +40,12 @@
     <div class="gallery">
       <h1 class="heading"><span>Code Fiesta 1.0 gallery</span></h1>
       <div class="image">
-        <!-- <img v-bind:src="image.logo" :alt="image.id" v-for="image in gallery" :key="image.id" /> -->
+        <img
+          v-for="gal in gallery"
+          :key="gal.id"
+          v-bind:src="gal.image"
+          :alt="gal.id"
+        />
       </div>
     </div>
   </div>
@@ -75,7 +80,28 @@
 
 .gallery {
   min-height: 100vh;
+  width: 100%;
 }
+
+.gallery .image{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.gallery .image img{
+  width: 29%;
+  padding: 1%;
+}
+.gallery .image img:hover{
+  cursor: pointer;
+  width: 30%;
+  padding: 0;
+}
+
+
 </style>
 
 <script>
@@ -84,36 +110,36 @@ import FooterSection from "@/components/FooterSection.vue";
 
 export default {
   name: "AboutUs",
+  data() {
+    return {
+      gallery: [
+        {
+          id: 1,
+          image: require("../assets/images/gallery/gal1.svg"),
+        },
+        {
+          id: 2,
+          image: require("../assets/images/gallery/gal2.svg"),
+        },
+        {
+          id: 3,
+          image: require("../assets/images/gallery/gal3.svg"),
+        },
+        {
+          id: 4,
+          image: require("../assets/images/gallery/gal4.svg"),
+        },
+        {
+          id: 5,
+          image: require("../assets/images/gallery/gal5.svg"),
+        },
+        {
+          id: 6,
+          image: require("../assets/images/gallery/gal6.svg"),
+        },
+      ],
+    };
+  },
   components: { FooterSection, FaqSection },
-  // data() {
-  //   return {
-  //     gallery: [
-  //       {
-  //         id: 1,
-  //         logo: require("../assets/images/gallery/a.JPG"),
-  //       },
-  //       {
-  //         id: 2,
-  //         logo: require("../assets/images/gallery/b.JPG"),
-  //       },
-  //       {
-  //         id: 3,
-  //         logo: require("../assets/images/gallery/c.JPG"),
-  //       },
-  //       {
-  //         id: 4,
-  //         logo: require("../assets/images/gallery/d.JPG"),
-  //       },
-  //       {
-  //         id: 5,
-  //         logo: require("../assets/images/gallery/e.JPG"),
-  //       },
-  //       {
-  //         id: 6,
-  //         logo: require("../assets/images/gallery/f.JPG"),
-  //       },
-  //     ],
-  //   };
-  // },
 };
 </script>
