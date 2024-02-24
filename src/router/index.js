@@ -1,8 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
-import SponsorPage from '../views/SponsorPage.vue'
-import SchedulePage from '../views/SchedulePage.vue'
-
 const routes = [
   {
     path: '/',
@@ -12,12 +9,12 @@ const routes = [
   {
     path: '/sponsors',
     name: 'sponsors',
-    component: SponsorPage
+    component: () => import("../views/SponsorPage.vue")
   },
   {
     path: '/schedule',
     name: 'schedule',
-    component: SchedulePage
+    component: () => import("../views/SchedulePage.vue")
   },
   {
     path: '/speakers',
