@@ -18,7 +18,7 @@
 
 .home {
   background: linear-gradient(#0000009c, #0000009c),
-    url(./assets/images/places/rumi_darwaza.svg);
+    url(./assets/images/places/rumi_darwaza.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
