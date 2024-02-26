@@ -83,7 +83,7 @@
   width: 100%;
 }
 
-.gallery .image{
+.gallery .image {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -91,29 +91,26 @@
   justify-content: space-evenly;
 }
 
-.gallery .image img{
+.gallery .image img {
   width: 29%;
   margin: 1%;
 }
-.gallery .image img:hover{
+.gallery .image img:hover {
   cursor: pointer;
-  width: 30%;
-  margin: 0.5%;
+  transform: scale(1.07);
 }
 
-@media screen and (max-width:750px) {
-  .gallery .image img{
-  width: 69%;
-  margin: 1%;
+@media screen and (max-width: 750px) {
+  .gallery .image img {
+    width: 69%;
+    margin: 1%;
+  }
+  .gallery .image img:hover {
+    cursor: pointer;
+    width: 70%;
+    margin: 0.5%;
+  }
 }
-.gallery .image img:hover{
-  cursor: pointer;
-  width: 70%;
-  margin: 0.5%;
-}
-}
-
-
 </style>
 
 <script>
