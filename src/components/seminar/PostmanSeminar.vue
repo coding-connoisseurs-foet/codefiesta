@@ -3,7 +3,8 @@
     <h1 class="heading">
       <span>{{ event.name }}</span>
     </h1>
-    <p><span>Description : </span> {{ event.overview }}</p>
+    <p class="highlight">Description : </p>
+    <p>{{ event.overview }}</p>
 
     <!-- ---------speaker card --------- -->
     <p class="highlight">Meet the Speakers :</p>
@@ -13,7 +14,7 @@
         v-for="speaker in event.speakers"
         :key="speaker.title"
       >
-        <div class="card text-center text-white bg-dark w-302">
+        <div class="card text-center text-white">
           <img
             :src="`https://github.com/${speaker.github}.png`"
             class="card-img-top"
@@ -93,12 +94,7 @@
 p span {
   color: var(--theme1);
   font-weight: 500;
-}
-
-.list-rule {
-  width: 75%;
-  color: #fff;
-  font-size: 1.4em;
+  font-size: larger;
 }
 
 .speaker {
@@ -112,7 +108,15 @@ p span {
   color: #000;
 }
 .card-text .btn:hover {
-  background-color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
+.card{
+  background-color: rgb(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.7);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
 }
 </style>
 
