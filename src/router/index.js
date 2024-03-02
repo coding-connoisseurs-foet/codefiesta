@@ -26,6 +26,11 @@ const routes = [
     name: 'AboutUs',
     component: () => import("../views/AboutUs.vue")
   },
+  {
+    path: '/postman',
+    name: 'PostmanSeminar',
+    component: () => import('../components/seminar/PostmanSeminar.vue'),
+  },
 ]
 
 const router = createRouter({

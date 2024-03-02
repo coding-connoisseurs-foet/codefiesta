@@ -60,13 +60,14 @@ export default {
 </script>
 
 <style>
-
-.cal{
-  font-size: 2.7vw;
+.cal {
+  font-size: 2.6em;
   font-weight: 500;
 }
-.cap{
-  font-size: 0.9vw;
+
+.cap {
+  font-size: 1em;
+  /* RECHECK LATER - BETTY */
   font-weight: 600;
 }
 
@@ -76,12 +77,14 @@ export default {
   margin: 25px 0;
   width: fit-content;
 }
+
 #countdown div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 9px;
 }
+
 #countdown div span:first-child {
   padding: 5px 10px;
   border-radius: 5px;
@@ -90,17 +93,35 @@ export default {
 
 /* --------------media-querry------------ */
 
-@media screen and (max-width:430px){
-  .cal{
-    font-size: 1.5em;
+@media screen and (max-width:430px) {
+  .cal {
+    font-size: 1.7em;
   }
-  #countdown{
+
+  #countdown {
     width: fit-content;
   }
-  .cap{font-size: 0.8em;}
 
-  #countdown div{
+  .cap {
+    font-size: 0.85em;
+  }
+
+  #countdown div {
     margin: 0 4px;
+  }
+}
+
+@media screen and (max-width:290px) {
+  .cal {
+    font-size: 1.5em;
+  }
+
+  .cap {
+    font-size: 0.7em;
+  }
+
+  #countdown div {
+    margin: 0 3px;
   }
 }
 </style>

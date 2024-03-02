@@ -1,22 +1,17 @@
 <template>
   <div class="w-100 p-0 m-0" id="root">
-    <div class="w-100 m-0 p-0">
-      <div class="w-100">
-        <div
-          class="text-md-start text-center d-flex flex-column align-items-center w-100 z-1"
-        >
-          <h4 class="text-white z-1" id="cf-tagline">
+    <div class="w-100 m-0 p-0 h-100">
+      <div class="w-100 h-100">
+        <div class="text-center d-flex flex-column align-items-center justify-content-center w-100 z-0 h-100">
+          <h4 class="text-white z-0" id="cf-tagline">
             The flagship coding festival of Lucknow
           </h4>
           <h1 id="cf-head" class="text-white">Code Fiesta</h1>
           <TimerVue event_date="2024-04-01 11:00" />
-          <div id="main-announce">
-            <a href="https://lu.ma/s1ah6f4l"
-              class="btn btn-lg mt-2 btn-outline-light rounded-0 cf-register"
-              ><span class="glowing-text">REGISTER NOW</span></a
-            >
+          <div id="main-announce" class="w-100">
+            <a href="https://lu.ma/s1ah6f4l" class="btn btn-lg mt-2 btn-outline-light rounded-0 cf-register"><span
+                class="glowing-text">REGISTER NOW</span></a>
           </div>
-          <RegisterForm />
         </div>
       </div>
     </div>
@@ -24,10 +19,10 @@
 </template>
 
 <style>
-
-#root{
+#root {
   height: 85vh;
 }
+
 :root {
   --glow-color: #fff;
 }
@@ -41,16 +36,17 @@
   font-size: 11vw;
   line-height: 0.7em;
   text-align: center;
+  padding: 0 5px;
 }
 
 #cf-tagline {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   letter-spacing: 5px;
-  font-size: 1.7em;
+  font-size: 1.7vw;
   text-transform: uppercase;
-  margin-top: 4.1em;
   text-align: center;
+  padding: 0 7px;
 }
 
 @keyframes slow {
@@ -246,11 +242,44 @@
 
 /* --------------media-querry------------ */
 
-@media screen and (max-width: 551px) {
-  /* .col-8 {
-        width: 100% !important;
-        margin: 0;
-    } */
+@media screen and (max-width: 1080px) {
+  #cf-head {
+    font-size: 15vw;
+  }
+
+  #cf-tagline {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #cf-head {
+    font-size: 17vw;
+  }
+
+  #cf-tagline {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  #cf-tagline {
+    font-size: 1em;
+  }
+
+  #cf-head {
+    font-size: 4.6em;
+    line-height: 1em;
+  }
+
+  .cf-register {
+    width: 70% !important;
+  }
+
+  #root {
+    height: 80vh;
+  }
+
 }
 </style>
 

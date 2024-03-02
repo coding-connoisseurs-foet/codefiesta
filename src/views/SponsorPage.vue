@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="container-fluid">
     <div class="community">
       <h1 class="heading">
         <span>Community Partners</span>
       </h1>
       <div class="image-cont">
-        <div class="image" v-for="com in community" :key="com.name">
+        <div class="image m-5 border rounded" v-for="com in community" :key="com.name">
           <img :src="com.logo" :alt="com.name" />
         </div>
       </div>
@@ -20,7 +20,6 @@
         <span>Our Sponsors</span>
       </h1>
     </div>
-
     <div class="community">
       <h1 class="heading">
         <span>Instresed In Sponsoring Us?</span>
@@ -66,7 +65,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .community {
   min-height: 100vh;
   display: flex;
@@ -82,22 +81,17 @@ export default {
   width: 100%;
 }
 
-.community .image {
-  height: 30vh;
-  width: 15vw;
+.image {
+  height: 230px;
+  width: 230px;
   background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(25px);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2% 8%;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.3);
 }
 
-.community .image:hover {
+.image:hover {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
@@ -106,7 +100,7 @@ export default {
   width: 80%;
 }
 
-.spn-promo{
+.spn-promo {
   display: flex;
   width: 100%;
   height: 80vh;

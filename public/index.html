@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>/favicon-16x16.png">
-	<link rel="manifest" href="<%= BASE_URL %>/site.webmanifest">
+	<link rel="manifest" href="<%= BASE_URL %>site.webmanifest">
 	<style>
 		:root {
 			--theme1: #fe8d41;
@@ -34,8 +34,38 @@
 			background-color: #000 !important;
 		}
 
+		.heading {
+			font-family: "Patua One", cursive;
+			text-transform: uppercase;
+			font-size: 4em;
+			text-align: center;
+			padding: 3.5% 0 2.5% 0;
+		}
+
+		.anim{
+			animation: text-flicker 10s linear infinite;
+		}
+
+		.heading span {
+			color: #000;
+			background-color: #fe8d41;
+			padding: 0 7px;
+		}
+
 		body::-webkit-scrollbar {
 			display: none;
+		}
+
+		@media screen and (max-width: 651px) {
+			.heading {
+				font-size: 3em;
+			}
+		}
+
+		@media screen and (max-width:290px) {
+			.heading {
+				font-size: 2.5em;
+			}
 		}
 	</style>
 	<title>CodeFiesta</title>

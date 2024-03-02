@@ -37,15 +37,10 @@
         individuals!
       </p>
     </div>
-    <div class="gallery">
+    <div class="gallery"> <!-- GALLERY NEEDS TO BE CHANGED LATER - BETTY -->
       <h1 class="heading"><span>Code Fiesta 1.0 gallery</span></h1>
       <div class="image">
-        <img
-          v-for="gal in gallery"
-          :key="gal.id"
-          v-bind:src="gal.image"
-          :alt="gal.id"
-        />
+        <img v-for="gal in gallery" :key="gal.id" v-bind:src="gal.image" :alt="gal.id" />
       </div>
     </div>
   </div>
@@ -60,6 +55,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
 .about-content {
   width: 80%;
   padding: 20px;
@@ -83,7 +79,7 @@
   width: 100%;
 }
 
-.gallery .image{
+.gallery .image {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -91,17 +87,28 @@
   justify-content: space-evenly;
 }
 
-.gallery .image img{
+.gallery .image img {
   width: 29%;
-  padding: 1%;
+  margin: 1%;
 }
-.gallery .image img:hover{
+
+.gallery .image img:hover {
   cursor: pointer;
-  width: 30%;
-  padding: 0;
+  transform: scale(1.07);
 }
 
+@media screen and (max-width: 750px) {
+  .gallery .image img {
+    width: 69%;
+    margin: 1%;
+  }
 
+  .gallery .image img:hover {
+    cursor: pointer;
+    width: 70%;
+    margin: 0.5%;
+  }
+}
 </style>
 
 <script>

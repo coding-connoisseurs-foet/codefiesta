@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "title": "Code Mesh",
+        "description": "This event is a pattern-recognition contest. Here, the participants will have to write the program code for the patterns given to them.",
+        "venue": "Seminar Hall, FoET, University of Lucknow (Second Campus)",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "codemesh.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 2,
+        "title": "Code-Flict",
+        "description": "This event is a competitive programming contest. Here, the participant will have to solve the given questions by writing optimised and efficient program codes.",
+        "Venue": "Seminar Hall, FoET, University of Lucknow (Second Campus)",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "cp.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 3,
+        "title": "Bug Thug",
+        "description": "This event is a debugging contest. Here, the participant will have to debug a program code by filling in the missing syntax and logic such that the program becomes functional and runs successfully, without any errors.",
+        "Venue": "Seminar Hall, FoET, University of Lucknow (Second Campus)",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "bug.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 4,
+        "title": "Meme Neeti",
+        "description": "This event is a meme-making contest. Here, the participant will get a chance to showcase their creative skills by making a tech-related meme.",
+        "Venue": "Seminar Hall, FoET, University of Lucknow (Second Campus)",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "meme.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 5,
+        "title": "Byte Battle",
+        "description": "This event is a technical quiz and is a team-based competition. Here, the team will have to answer technical questions in a series of rounds, each having its own constraints, based on which the winners will be decided.",
+        "Venue": "TBD",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "quiz.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 6,
+        "title": "Reverse Engineering",
+        "description": "In this event, participants will undertake the challenge of reverse engineering an executable file. They will be tasked with writing code to replicate the functionality of the executable without any additional description of the program.",
+        "Venue": "TBD",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "reverse.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 7,
+        "title": "Design Masters: The Competition",
+        "description": "The seminar on UI/UX Development will be followed by a competition on the same to let the participants showcase their creativity into designing responsive and interactive user interfaces and give them a good practise of all that they've learnt.",
+        "Venue": "TBD",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "design.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 8,
+        "title": "Capture The Flag",
+        "description": "The seminar on cyber security will be followed by a competition on the same in which participants will attempt to find text strings called 'flags', that will be secretly hidden in purposefully-vulnerable programs or websites which would help them practice and develop computer security skills.",
+        "Venue": "TBD",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "flag.svg",
+        "to": "/",
+        "speaker": "TBD"
+    },
+    {
+        "id": 8,
+        "title": "All about API",
+        "description": "A comprehensive seminar on API basics and Postman tailored to equip participants with a solid understanding of API basics, including request-response mechanisms, methods, and their applications. Dive deep into practical sessions where you'll set up a project on Replit, design APIs employing every key method (GET, POST, PUT, DELETE), and master testing them using Postman.",
+        "Venue": "TBD",
+        "date": "TBD",
+        "time": "TBD",
+        "image": "postman.png",
+        "to": "/postman",
+        "speaker": "Arvind Srivastava and Siddhartha Mishra"
+    }
+]
